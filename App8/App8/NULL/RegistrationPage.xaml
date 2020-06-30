@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns = "http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.RegistrationPage">
+    <StackLayout>
+        <TableView>
+            <TableView.Root>
+                <TableRoot>
+                    <TableSection x:Name="Personal" Title = "Персональные данные" >
+                        <EntryCell x:Name="newLogin" Placeholder="Login" Text="{Binding Login}"/>
+                        <EntryCell x:Name="newPaswword" Placeholder="Password"  Text="{Binding Password}"/>
+                    </TableSection>
+                    <TableSection x:Name="Contact" Title = "Контакты" >
+                        <EntryCell x:Name="newMail" Placeholder="Mail" Keyboard="Email" Text="{Binding Mail}"/>
+                        <EntryCell x:Name="newPhone" Placeholder="Phone" Keyboard="Telephone"  Text="{Binding Telephone}"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+        <Button x:Name="Registration" Text="Регистрация" Clicked="Registration_Clicked"/>
+    </StackLayout>
+</ContentPage>

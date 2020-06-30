@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App8.SearchPlugin">
+    <StackLayout Orientation="Horizontal" Spacing="5">
+        <Entry x:Name="searchEntry" HorizontalOptions="FillAndExpand" />
+        <Button x:Name="Searchb" Clicked="OnClicked" Text="Поиск" />
+    </StackLayout>
+</ContentView>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.newpreview"
+              xmlns:local="clr-namespace:App8;assembly=App8"
+             >
+    <ContentPage.BindingContext>
+        <local:HomePageViewModel />
+    </ContentPage.BindingContext>
+    <NavigationPage.TitleView>
+        <Grid RowSpacing="0" ColumnSpacing="2" Padding="0" BackgroundColor="Transparent">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <local:SearchPlugin Search="SearchUsers" HeightRequest="48"  BackgroundColor="White" 
+                                   Margin="5" WidthRequest="500"></local:SearchPlugin>
+        </Grid>
+    </NavigationPage.TitleView>
+    
+    <StackLayout HorizontalOptions="Center"   >
+        <Entry x:Name="startpl" Placeholder="Пункт отправления"/>
+        <Entry x:Name="endpl" Placeholder="Пункт прибытия"/>
+        <DatePicker x:Name="timer" DateSelected="Timer_DateSelected"/>
+        <Button x:Name="Find" Text="Найти" Clicked="Button_Clicked" CornerRadius="30" WidthRequest="200" BorderWidth="4" HeightRequest="40" HorizontalOptions="Center"/>
+        <RelativeLayout >
+            <Image x:Name="br" Source="br.png"  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property= Width }"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+
+            <ListView x:Name="TrainsList" ItemsSource="{Binding }"  HasUnevenRows="True" HeightRequest="540"  SeparatorColor="Black" ItemSelected="OnItemSelected" HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate  >
+                        <DataTemplate >
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="по возврастанию" Clicked="MenuItem_Clicked" />
+                                    <MenuItem Text="По убыванию" Clicked="MenuItem_Clicked_1" />
+                                    <MenuItem Text="по Стоимости" Clicked="MenuItem_Clicked_2" />
+                                    <MenuItem Text="по Времени отправления" Clicked="MenuItem_Clicked_3" />
+                                <MenuItem Text="по Времени в поздке" Clicked="MenuItem_Clicked_4" />
+                            </ViewCell.ContextActions>
+                                <ViewCell.View >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="ha.png" WidthRequest="45" HeightRequest="60"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding Id, StringFormat='{0} '}" FontSize="Large" />
+                                            <Label Text="{Binding Type , StringFormat='Тип: {0}'}" FontSize="Small" />
+                                            <Label Text="{Binding Starttime, StringFormat='Время отправления {0}'}"  FontSize="Small" />
+                                            <Label Text="{Binding Finishtime, StringFormat='Время прибытия {0}'}"  FontSize="Small" />
+                                        <Label Text="{Binding Totaltime, StringFormat='Общее время {0}'}"  FontSize="Small" />
+                                        <Label Text="{Binding check, StringFormat='Состояние {0}'}"  FontSize="Small" FontAttributes="Bold" />
+                                    </StackLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            <Grid x:Name="grid">
+
+            </Grid>
+        </RelativeLayout>
+    </StackLayout>
+</ContentPage>

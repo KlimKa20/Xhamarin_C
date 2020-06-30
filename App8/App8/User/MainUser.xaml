@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local1="clr-namespace:App8"
+             mc:Ignorable="d"
+             x:Class="App8.MainUser">
+    <MasterDetailPage.Master >
+        <ContentPage Title="Master" BackgroundColor="Lavender">
+            <ContentPage.Content>
+                <StackLayout Padding="5,30,5,5">
+                    <!--<Button x:Name="Mastermain" Text="Главная" Clicked="Button_Clicked_1"/>-->
+                    <Button x:Name="Masterbase" Text="база" Clicked="Button_Clicked_2"/>
+                    <Button x:Name="MasterComent" Text="справка" Clicked="Button_Clicked"/>
+                    <Button x:Name="account" Text="личный кабинет" Clicked="Button_Clicked_3"/>
+                    <Button x:Name="MAsterTable" Text="Онлайн табло" Clicked="Button_Clicked_4"/>
+                    <Button x:Name="sett" Text="вход" Clicked="Sett_Clicked"/>
+                    <Button x:Name="ex" Text="вход" Clicked='Ex_Clicked'/>
+                    <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Margin="0,20,0,0">
+                        <Picker.Items>
+                            <x:String>Русский</x:String>
+                            <x:String>Английский</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage BackgroundColor="Lavender">
+            <ContentPage.Content>
+                <Label Text="sdfdsf" />
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+    <!--<TabbedPage.Children>
+        <local1:newpreview/>
+        <local1:informpas/>
+        <local1:Issue_answer/>
+        <local1:cont/>
+        <local1:exit/>
+    </TabbedPage.Children>-->
+</MasterDetailPage>

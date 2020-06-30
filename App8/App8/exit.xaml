@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.exit"
+             Title="Exit">
+    <StackLayout>
+        <ListView x:Name="TrainsList" HasUnevenRows="True" ItemsSource="{Binding }" ItemTapped="TrainsList_ItemTapped" Margin="0,0,0,5">
+            <ListView.ItemTemplate >
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Ntrain, StringFormat='Номер поезда: {0} '}" FontSize="Medium" FontAttributes="Bold"/>
+                            <Label Text="{Binding TCount, StringFormat='Количество билетов: {0} '}" FontSize="Medium"/>
+                            <Label Text="{Binding NType, StringFormat='Тип вагона: {0} '}" FontSize="Medium"/>
+                            <Label Text="{Binding Starttime, StringFormat='Время отправления {0} '}" FontSize="Medium"/>
+                            <Label Text="{Binding Startdate, StringFormat='Дата отправления {0} '}" FontSize="Medium"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label x:Name="train"/>
+        <Button x:Name="take" Text="Сдать" Clicked="lost" IsVisible="False" BorderWidth="4" WidthRequest="200" HorizontalOptions="Center" BorderColor="Blue" CornerRadius="30"  HeightRequest="40" FontSize="Small"/>
+        <Button x:Name="revie" Text="Оставить отзыв" IsVisible="False" BorderWidth="4" Clicked="Revie_Clicked" WidthRequest="200" HorizontalOptions="Center" BorderColor="Blue" CornerRadius="30"  HeightRequest="40" FontSize="Small" />
+    </StackLayout>
+    
+</ContentPage>

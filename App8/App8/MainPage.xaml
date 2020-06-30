@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local1="clr-namespace:App8"
+            
+            mc:Ignorable="d"
+            
+             x:Class="App8.MainPage">
+
+    <MasterDetailPage.Master >
+        <ContentPage Title="Master" >
+            <ContentPage.Content>
+                <StackLayout Padding="5,30,5,5">
+                    <!--<Button x:Name="Mainp" Text="Главная" Clicked="Button_Clicked_5"/>-->
+                    <Button x:Name="Trainsshedule" Text="Расписание поездов" Clicked="Button_Clicked_2"/>
+                    <Button x:Name="Help" Text="Инфо" Clicked="Button_Clicked"/>
+                    <Button x:Name="Online" Text="Онлайн табло" Clicked="Button_Clicked_4"/>
+                    <Button x:Name="LogIn" Text="вход" Clicked="Button_Clicked_1"/>
+                    <Button x:Name="sett" Text="вход" Clicked="Sett_Clicked"/>
+                    <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Margin="0,20,0,0">
+                        <Picker.Items>
+                            <x:String>Русский</x:String>
+                            <x:String>Английский</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <!--<TabbedPage.Children >
+        <local1:newpreview Title="ewf" IconImageSource="lk.png"/>
+        <local1:informpas />
+        <local1:cont/>
+        <local1:LogIn/>
+
+    </TabbedPage.Children>-->
+
+</MasterDetailPage>
+<!--xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarTextColor="White"
+            android:TabbedPage.BarItemColor="#66FFFFFF"
+            android:TabbedPage.BarSelectedItemColor="White"-->

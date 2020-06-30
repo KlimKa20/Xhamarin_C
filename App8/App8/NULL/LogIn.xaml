@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.LogIn"
+             Title="LogIn">
+    <StackLayout>
+        <StackLayout x:Name="log">
+            <Entry x:Name="Log" Placeholder="Login"/>
+            <Entry x:Name="Password" Placeholder="Password" IsPassword="True"/>
+            <Button x:Name="Loggo" Text="Войти" Clicked="Loginto" WidthRequest="300" HorizontalOptions="Center"  BorderColor="Blue" BorderWidth="4" CornerRadius="30"  HeightRequest="40" FontSize="Small"/>
+            <Button x:Name="Redistration" Text=" Регистрация"  TextColor="Blue" WidthRequest="160"   Clicked="Registration" HorizontalOptions="Center"  BorderColor="Blue" BorderWidth="4" CornerRadius="30"  HeightRequest="40" FontSize="Small" Margin="0,10,0,0"/>
+            <Button x:Name="Forget" Text="Забыли пороль?"  BorderWidth="4" TextColor="Blue" WidthRequest="200" Clicked="Forget_Clicked" HorizontalOptions="Center" BorderColor="Blue" CornerRadius="30"  HeightRequest="40" FontSize="Small" Margin="0,10,0,0"/>
+        </StackLayout>
+        <StackLayout x:Name="set" IsVisible="False">
+            <Entry x:Name="mailenter" Placeholder="Введите почту забытого аккаунта" />
+            <Button x:Name="sendermail" Text="Отправить" Clicked="Button_Clicked" HorizontalOptions="Center" WidthRequest="150"  BorderColor="Blue" BorderWidth="4" CornerRadius="30"  HeightRequest="40" FontSize="Small"/>
+            <Entry x:Name="keyenter" Placeholder="Введите Ключ из письма" IsVisible="False"/>
+            <Button x:Name="senderkey" Text="Отправить" Clicked="Senderkey_Clicked" IsVisible="False" WidthRequest="150" HorizontalOptions="Center"  BorderColor="Blue" BorderWidth="4" CornerRadius="30"  HeightRequest="40" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout x:Name="update" IsVisible="False">
+            <Entry x:Name="Password1" Placeholder="Password1" IsPassword="True"/>
+            <Entry x:Name="Password2" Placeholder="Password2" IsPassword="True"/>
+            <Button x:Name="gg" Text="Востановить" Clicked="Button_Clicked_1" WidthRequest="150"  HorizontalOptions="Center"  BorderColor="Blue" BorderWidth="4" CornerRadius="30"  HeightRequest="40" FontSize="Small"/>
+        </StackLayout>
+        <Image x:Name="br" Source="R.png"  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property= Width }"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.Issue_answer"
+             Title="issue">
+    <StackLayout>
+        <Label x:Name="givecom" Text="Оставьте ваш коментарий" FontSize="Body" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+        <Editor x:Name="Coment"  HeightRequest="200"/>
+        <Button x:Name="Send" Text="Отправить" Clicked="Send_Clicked" HorizontalOptions="Center" WidthRequest="200" BorderColor="Blue" BorderWidth="4" CornerRadius="30"  HeightRequest="40" FontSize="Body"/>
+        <StackLayout>
+            <ListView x:Name="ComentList" ItemsSource="{Binding}"  HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="hh.png" WidthRequest="45" HeightRequest="60"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding User}" FontSize="Medium" />
+                                        <Label Text="{Binding com}" FontSize="Small" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

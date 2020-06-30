@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App8.NewTrainPage">
+    <StackLayout >
+        
+            <ScrollView HorizontalScrollBarVisibility="Always" Orientation="Horizontal" >
+            <StackLayout x:Name="gg" Spacing="8" Orientation="Horizontal" HorizontalOptions="Fill" >
+                <Image x:Name="f1" Source="https://travel-wiki.ru/wp-content/uploads/93cc8b8bee1292a822c8b909e6ac60eb.jpg" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f2" Source="https://pbs.twimg.com/media/DjghcL_WsAEsILk.jpg:large" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f3" Source="https://kudago.com/media/images/news/f5/a1/f5a1cdcc144553cc794103f005bc10fd.jpg" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f4" Source="https://zhd-online.ru/wp-content/uploads/388.jpg" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f5" Source="https://avatars.mds.yandex.net/get-zen_doc/22526/pub_5c576abedde03600aeecf69b_5c57724e90ab7c00aed75152/scale_1200" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f6" Source="http://zabavnik.club/wp-content/uploads/Foto_vagona_kupe_2_20104453.jpg" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f7" Source="https://www.e-news.su/uploads/posts/2015-07/1436950506_9.jpg" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+                <Image x:Name="f8" Source="https://cs13.pikabu.ru/post_img/2019/06/14/7/og_og_1560508387270612310.jpg" HeightRequest="170" WidthRequest="280" HorizontalOptions="FillAndExpand" IsVisible="False"/>
+            </StackLayout>
+        </ScrollView>
+        
+        <ScrollView HorizontalScrollBarVisibility="Always" Orientation="Horizontal" >
+            <Grid x:Name="cran" RowSpacing="15" ColumnSpacing="15" Margin="7,0" Padding="7,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </ScrollView>
+
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:App8;assembly=App8"
+             x:Class="App8.informpas"
+             Title="informpas">
+    <StackLayout BackgroundColor="Gainsboro"  >
+        <local:SearchPlugin Search="SearchUsers"></local:SearchPlugin>
+        <RelativeLayout>
+            <Image Source="br.png" Margin="100,0,20,250" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property= Width }"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+            <ListView x:Name="TrainsList" ItemsSource="{Binding}" ItemSelected="OnItemSelected" HasUnevenRows="True" >
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="по возврастанию" Clicked="MenuItem_Clicked_1" />
+                            </ViewCell.ContextActions>
+                            <ViewCell.View >
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="hh.png" WidthRequest="45" HeightRequest="60"/>
+                                    <StackLayout>
+                                        <Label Text="{Binding Number}" FontSize="Medium" />
+                                        <Label Text="{Binding PlaceTr}" FontSize="Small" />
+                                        <Label Text="{Binding PlaceAr}" FontSize="Small" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </StackLayout>
+</ContentPage>

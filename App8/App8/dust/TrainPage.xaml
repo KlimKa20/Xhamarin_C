@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App8.TrainPage" Title="Информация о Поезде">
+    <StackLayout>
+        <Label Text="Номер поезда" />
+        <Label x:Name="Numb" Text="{Binding Number}" />
+        <Label Text="Станция отправления" />
+        <Label Text="{Binding PlaceTr}" />
+        <Label Text="Станция Прибытия" />
+        <Label Text="{Binding PlaceAr}" />
+        <Label Text="Время Отправления" />
+        <Label Text="{Binding TimeTr}" />
+        <Label Text="Время Прибытия" />
+        <Label Text="{Binding TimeAr}" />
+        <Label Text="Колличество мест" />
+        <Label x:Name="tiket" Text="{Binding Count}" />
+        <Label x:Name="ab" Text="Колличество Билетов" />
+        <StackLayout>
+            <Stepper x:Name="ac" Minimum="0" Maximum="10" ValueChanged="OnStepperValueChanged"/>
+            <Label x:Name="acl" Text="0" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            
+            <!--<Button x:Name="a" Text="Сохранить" Clicked="SaveTrain" />
+            <Button x:Name="b" Text="Удалить" Clicked="DeleteTrain" />
+            <Button x:Name="c" Text="Отмена" Clicked="Cancel" />-->
+            <Button x:Name="d" Text="Купить" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
